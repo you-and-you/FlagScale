@@ -136,7 +136,6 @@ class DiffusionEngine:
 
         pipeline = DiffusionPipeline.from_pretrained(pretrained_model_name_or_path, **kwargs)
         # TODO(yupu): Read from config
-        pipeline.to("cuda")
         if self.to_cuda:
             pipeline.to("cuda")
         if self.device:
